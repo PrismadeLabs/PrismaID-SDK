@@ -6,6 +6,10 @@
 
 The PrismaID Web SDK is intended to be used in a web application and collect signals created by a PrismaID tag. The PrismaID Web SDK will internally talk to the Prismade Decoder Backend and decode that signal. The result is sent back to the application through a callback. In addition to information related to the decoded data, there are events for user interaction and potential hints to improve reading results.
 
+## Authentication
+
+To use this SDK, you need a valid API-Key. For testing purposes, you can use the key `Mwtx2fLCIZ3BXYoAXVUbl8KM1GKQGhE3oCJyssW9` which is limited to detection of our standard Demo Set. See www.prismade.com for additional information.
+
 ## Install
 
 ```bash
