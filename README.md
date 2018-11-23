@@ -1,10 +1,10 @@
-# Web SDK
+# PrismaID Web SDK
 
 ![Beta 1.0.5](https://img.shields.io/badge/beta-1.0.5-red.svg)
 
-## Purpose
+## Overview
 
-The PrismaSDK is intended to be used in a web application and collect signals created by a PrismaID tag. The PrismaSDK will internally talk to the Prismade Decoder Backend and decode that signal. The result is sent back to the application through a callback. In addition to information related to the decoded data, there are events for user interaction and potential hints to improve reading results.
+The PrismaID Web SDK is intended to be used in a web application and collect signals created by a PrismaID tag. The PrismaID Web SDK will internally talk to the Prismade Decoder Backend and decode that signal. The result is sent back to the application through a callback. In addition to information related to the decoded data, there are events for user interaction and potential hints to improve reading results.
 
 ## Install
 
