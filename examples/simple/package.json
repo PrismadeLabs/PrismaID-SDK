@@ -1,13 +1,16 @@
 {
-  "name": "websdk_test_tiny",
+  "name": "prismaid_sdk_demo_simple",
   "version": "1.0.0",
-  "description": "",
+  "author": "Prismade Labs GmbH",
+  "homepage": "http://www.prismade.com",  
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@prismadelabs/prismaid": "^1.0.5"
+  },
+  "devDependencies": {},
+  "description": "PrismaID SDK Demo Project"
 }

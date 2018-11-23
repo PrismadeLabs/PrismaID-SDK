@@ -1,5 +1,5 @@
 {
-  "name": "prismasdk_demo_ionic",
+  "name": "prismaid_sdk_demo_ionic",
   "version": "1.0.0",
   "author": "Prismade Labs GmbH",
   "homepage": "http://www.prismade.com",
@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/core": "~4.15.0",
     "@ionic/storage": "2.2.0",
+    "@prismadelabs/prismaid": "^1.0.5",
     "createjs-module": "^0.8.3",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
@@ -33,5 +34,5 @@
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
   },
-  "description": "PrismaSDK Demo Project"
+  "description": "PrismaID SDK Demo Project"
 }
