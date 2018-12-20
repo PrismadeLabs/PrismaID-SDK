@@ -1,6 +1,6 @@
 # PrismaID Web SDK
 
-![Beta 1.0.5](https://img.shields.io/badge/beta-1.0.5-red.svg)
+![Beta 1.0.7](https://img.shields.io/badge/beta-1.0.7-red.svg)
 
 ## Overview
 
@@ -112,6 +112,10 @@ sdk.getConnectivitySubject().subscribe((response) => {
     console.log("*) connectivity:", response.status)
 })
 
+sdk.getUsabilitySubject().subscribe((response: UsabilityResponse) => {
+    console.log("*) usability response:", response.event, response.payload, response.localizedMessage())
+})
+
 sdk.attachToElement(canvas)
 
 ...
@@ -188,6 +192,10 @@ export class HomePage {
 
         this.sdk.getHintSubject().subscribe((response: HintResponse) => {
             console.log("*) hint:", response.code, response.message, response.type)
+        })
+        
+        this.sdk.getUsabilitySubject().subscribe((response: UsabilityResponse) => {
+            console.log("*) usability response:", response.event, response.payload, response.localizedMessage())
         })
 
         this.sdk.attachToElement(this.canvasRef.nativeElement)
