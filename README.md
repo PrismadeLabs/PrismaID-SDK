@@ -1,6 +1,8 @@
 # PrismaID Web SDK
 
-![Beta 1.0.7](https://img.shields.io/badge/beta-1.0.7-red.svg)
+![Version](https://img.shields.io/npm/v/@prismadelabs/prismaid.svg)
+![Size](https://img.shields.io/bundlephobia/min/@prismadelabs/prismaid.svg)
+![Types](https://img.shields.io/npm/types/@prismadelabs/prismaid.svg)
 
 ## Overview
 
