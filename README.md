@@ -10,7 +10,7 @@ The PrismaID Web SDK is intended to be used in a web application and collect sig
 
 ## Authentication
 
-To use this SDK, you need a valid API-Key. For testing purposes, you can use the key `Mwtx2fLCIZ3BXYoAXVUbl8KM1GKQGhE3oCJyssW9` which is limited to detection of our standard Demo Set. See www.prismade.com for additional information.
+To use this SDK, you need a valid API-Key. See www.prismade.com for additional information.
 
 ## Install
 
