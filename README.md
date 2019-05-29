@@ -1,8 +1,6 @@
 # PrismaID Web SDK
 
-![Version](https://img.shields.io/npm/v/@prismadelabs/prismaid.svg)
-![Size](https://img.shields.io/bundlephobia/min/@prismadelabs/prismaid.svg)
-![Types](https://img.shields.io/npm/types/@prismadelabs/prismaid.svg)
+![Version](https://img.shields.io/npm/v/@prismadelabs/prismaid.svg) ![Size](https://img.shields.io/bundlephobia/min/@prismadelabs/prismaid.svg) ![Types](https://img.shields.io/npm/types/@prismadelabs/prismaid.svg)
 
 ## Overview
 
@@ -10,7 +8,7 @@ The PrismaID Web SDK is intended to be used in a web application and collect sig
 
 ## Authentication
 
-To use this SDK, you need a valid API-Key. See www.prismade.com for additional information.
+To use this SDK, you need a valid API-Key. For testing purposes, you can use the key `Mwtx2fLCIZ3BXYoAXVUbl8KM1GKQGhE3oCJyssW9` which is limited to detection of our standard Demo Set. See www.prismade.com for additional information.
 
 ## Install
 
@@ -22,41 +20,40 @@ npm install @prismadelabs/prismaid
 
 At the moment we provided two minimalistic samples how to use the Web SDK in
 
- - Javascript application
- - Ionic application
+-   Javascript application
+-   Ionic application
 
 ## Table of Contents
 
-* [Use SDK in Javascript application](#Use-SDK-in-Javascript-application)
-* [Use SDK in Ionic application](#Use-SDK-in-Ionic-application)
-* [API reference](#API-reference)
-* [Subscriptions](#Subscriptions)
+-   [Use SDK in Javascript application](#Use-SDK-in-Javascript-application)
+-   [Use SDK in Ionic application](#Use-SDK-in-Ionic-application)
+-   [API reference](#API-reference)
+-   [Subscriptions](#Subscriptions)
 
 ## Use SDK in Javascript application
 
-It is assumed that one is experienced to create a web application, so we will not go too much into detail here.
-The SDK needs to collect raw touch events from any HTML element, in our example a canvas. Therefore, we will need a simple HTML page with a canvas. Secondly, the page has to include our JavaScript sample file.
+It is assumed that one is experienced to create a web application, so we will not go too much into detail here. The SDK needs to collect raw touch events from any HTML element, in our example a canvas. Therefore, we will need a simple HTML page with a canvas. Secondly, the page has to include our JavaScript sample file.
 
 ```html
 # index.html
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Prisma SDK</title>
+        <meta
+            name="viewport"
+            content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Prisma SDK</title>
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-</head>
+    <body>
+        <canvas id="prismasdk" style="position: fixed; left: 10px; top: 10px; "> </canvas>
 
-<body>
-    <canvas id="prismasdk" style="position: fixed; left: 10px; top: 10px; ">
-    </canvas>
-
-    <!-- The main bundle js is generated via browserify -->
-    <script src="./bundle.js"></script>
-</body>
-
+        <!-- The main bundle js is generated via browserify -->
+        <script src="./bundle.js"></script>
+    </body>
 </html>
 ```
 
@@ -69,7 +66,7 @@ const canvas = document.getElementById("prismasdk")
 canvas.width = window.innerWidth - 20
 canvas.height = window.innerHeight - 20
 
-const sdk = new pl.PrismaSDK("YOUR_API_KEY")  
+const sdk = new pl.PrismaSDK("YOUR_API_KEY")
 const version = "Prisma SDK version " + pl.PrismaSDK.version()
 
 const ctx = canvas.getContext("2d")
@@ -134,7 +131,7 @@ It is assumed that one is experienced with Ionic applications, so we will not go
 # home.html
 
 <ion-content>
-	<canvas #canvas id="home"></canvas>
+    <canvas #canvas id="home"></canvas>
 </ion-content>
 ```
 
@@ -197,7 +194,7 @@ export class HomePage {
         this.sdk.getHintSubject().subscribe((response: HintResponse) => {
             console.log("*) hint:", response.code, response.message, response.type)
         })
-        
+
         this.sdk.getUsabilitySubject().subscribe((response: UsabilityResponse) => {
             console.log("*) usability response:", response.event, response.payload, response.localizedMessage())
         })
@@ -215,37 +212,59 @@ export class HomePage {
 ```typescript
 public expectedCodeType?: CodeType
 ```
+
 Set this property if your application supports detection of multiple `CodeType`s, but you at this point in time you expect only a specific one.
+
 ```typescript
 public expectedSwipingGesture?: SwipingGesture
 ```
+
 Set this property if your application supports multiple `SwipingGesture`s, but you at this point in time you expect only a specific one.
+
 ```typescript
 public isFirstStart: boolean
 ```
+
 This property tells you if the application was started for the first time on this device/browser (determined using cookie).
+
 ```typescript
 constructor(APIKey: string, serverURL: string = "https://api.prismade.net/prismaid")
 ```
+
 The `APIKey` identifies your application towards the server. `serverURL` is a optional parameter used to override the API baseURL of the SDK. You can use `https://api-dev.prismade.net/prismaid` to connect to the development environment. However, you will need a different `APIKey` there.
+
 ```typescript
 function pause()
 ```
+
 Call this method to stop the SDK from recording any signals and processing them. All currently open operations will still be finished and responses will be sent.
+
 ```typescript
 function resume()
 ```
+
 Call this to resume normal operation of the SDK.
+
 ```typescript
 function isRunningStandalone(): boolean
 ```
+
 This method will tell you if the application is currently executed in "standalone" mode (e.g. iOS home screen).
+
 ```typescript
 function setCustomPayload(jsonObject: any): boolean
 ```
+
 Use this function to set a custom payload (JSON compatible object) to the server. This is only required, if your application requires a callback from the PrismaID backend to your own backend servers. Needs to be configured for your `APIKey` first. Method returns `true` if a valid payload was provided.
 
+```typescript
+function setLanguage(language: string | undefined)
+```
+
+This method will force the SDK to return localized event in a specific language. Provide a lowercase countrycode here (`de`, `en`, ...). If the specified localization doesn't exist, falls back to `en`.
+
 ### `enum CodeType`
+
 ```typescript
 {
     Displacement = "Displacement",
@@ -256,6 +275,7 @@ Use this function to set a custom payload (JSON compatible object) to the server
 ```
 
 ### `enum SwipingGesture`
+
 ```typescript
 {
     singleSwipe,
@@ -269,129 +289,175 @@ Use this function to set a custom payload (JSON compatible object) to the server
 Use subscriptions to get notified of different events that happen before, during or after PrismaID use.
 
 ### `InitialisationResponse`
+
 Evaluate this response the get device specific information, like support and display density.
+
 ```typescript
 public codeSetTypes: CodeType[]
 ```
+
 ```typescript
 public ppi: number
 ```
+
 ```typescript
 public devicePixelRatio: number
 ```
+
 ```typescript
 public clientConfig: ClientConfig
 ```
+
 ```typescript
 public deviceSupport: DeviceSupport
 ```
 
 ### TutorialResponse
+
 Use this response to initialize [PrismaID-Tutorial](https://github.com/PrismadeLabs/PrismaID-Tutorial).
+
 ```typescript
 public ppi: number
 ```
+
 ```typescript
 public devicePixelRatio: number
 ```
+
 ```typescript
 public deviceSupport: DeviceSupport
 ```
+
 ```typescript
 public slideTypes: TutorialSlideType[] = []
 ```
 
 ### DecoderResponseSuccess
+
 Use this response to find out about a successfully detected PrismaID.
+
 ```typescript
 public readonly codeId: string
 ```
+
 ID of the PrismaID.
+
 ```typescript
 public readonly codeSet: string
 ```
+
 CodeSet name of the PrismaID.
+
 ```typescript
 public readonly probability: number
 ```
+
 Probability (0-1) that this detection is correct.
+
 ```typescript
 public readonly direction: string
 ```
+
 The direction of the user interaction.
+
 ```typescript
 public readonly rawData: any
 ```
+
 Raw data of the response, only required in combination with `setCustomPayload()`.
 
 ### DecoderResponseError
+
 Use this response to find out when a detection failed.
+
 ```typescript
 public readonly errorCode: string
 ```
+
 Error reason code.
+
 ```typescript
 public readonly message: string
 ```
+
 Technical error message. Do not display this to the user.
+
 ```typescript
 public readonly hints: DecoderHint[] = []
 ```
+
 List of potential hints for the user to improve results. Do not use directly, use `HintResponse` instead.
 
 ### InteractionResponse
+
 Use this response to find out about PrismaID interaction events.
+
 ```typescript
 public event: string
 ```
-* `"started"` - Interaction with the device started. This typically happens, when the user touches the screen with finger or PrismaID.
-* `"changed"` - Triggered when specific characteristics of the signal change, only required for special applications.
-* `"complete"` - Interaction with the device finished. This typically happens, when the user removed PrismaID and finger from the screen.
+
+-   `"started"` - Interaction with the device started. This typically happens, when the user touches the screen with finger or PrismaID.
+-   `"changed"` - Triggered when specific characteristics of the signal change, only required for special applications.
+-   `"complete"` - Interaction with the device finished. This typically happens, when the user removed PrismaID and finger from the screen.
 
 ### ProgressResponse
+
 Use this response to find about the progress of user interaction.
+
 ```typescript
 public progress: number
 ```
+
 Value between 0 and 100. When value reached 100, user can take PrismaID off the screen.
+
 ```typescript
 public direction: SwipeDirection
 ```
+
 Current direction of the interaction.
+
 ```typescript
 public scratchRound: number
 ```
+
 For scratch codes, the number of "rounds" the user scratched.
 
 ### HintResponse
+
 Use this response to show hints to the user after a failed detection.
+
 ```typescript
 public code: string
 ```
+
 ```typescript
 public type: string
 ```
+
 ```typescript
 public message: string
 ```
 
 ### UsabilityResponse
+
 Use this to response to guide the user through the PrismaID detection and give feedback about incorrect interaction.
+
 ```typescript
 public event: string
 ```
-* `"browser_not_supported"` - Current browser is on blacklist of unsupported browsers.
-* `"browser_support_unknown"` - Current browser is unknown.
-* `"device_not_supported"` - Current device is on blacklist of unsupported devices.
-* `"device_usage_requirements"` - Current device requires special usage. These are best explained to the user during tutorial.
-* `"display_too_small_displacement"`, `"display_too_small_pack"`, `"display_too_small_tick"`, `"display_too_small_tornado"` - The display of this device is too small to fit the PrismaID.
-* `"hold_card_below_swipe"` - User is not holding the PrismaID in the bottom.
-* `"hold_with_one_finger_only"` - User uses multiple fingers to hold the PrismaID.
-* `"pick_up_code_from_display"` - User should pick up the PrismaID from screen.
-* `"display_small_should_add_to_home"` - Display is too small without adding the application to home screen and run in standalone mode.
-* `"take_device_in_hand"` - User should take the device in their hands, not place them on a table. This usually improves detection accuracy.
+
+-   `"browser_not_supported"` - Current browser is on blacklist of unsupported browsers.
+-   `"browser_support_unknown"` - Current browser is unknown.
+-   `"device_not_supported"` - Current device is on blacklist of unsupported devices.
+-   `"display_too_small_displacement"`, `"display_too_small_pack"`, `"display_too_small_tick"`, `"display_too_small_tornado"` - The display of this device is too small to fit the PrismaID.
+-   `"hold_card_below_swipe"` - User is not holding the PrismaID in the bottom.
+-   `"hold_with_one_finger_only"` - User uses multiple fingers to hold the PrismaID.
+-   `"pick_up_code_from_display"` - User should pick up the PrismaID from screen.
+-   `"display_small_should_add_to_home"` - Display is too small without adding the application to home screen and run in standalone mode.
+-   `"take_device_in_hand"` - User should take the device in their hands, not place them on a table. This usually improves detection accuracy.
 
 ```typescript
 public payload?: any
 ```
+
 Some events come with a specific payload of additional data, e.g. a list of device specific usage requirements.
