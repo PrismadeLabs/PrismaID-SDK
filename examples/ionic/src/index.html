@@ -1,62 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html dir="ltr" lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>PrismaID SDK Demo</title>
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta name="build" content="1.0.0 131118">
+    <head>
+        <meta charset="utf-8" />
+        <title>Smart ID</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/icon/icon64x64.ico">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#4e8ef7">
+        <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="Smart ID" />
+        <meta name="theme-color" content="#16161d" />
 
-    <!-- add to homescreen for ios -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="apple-mobile-web-app-title" content="World Lottery Summit">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
 
-    <link href="assets/icon/icon180x180.png" rel="apple-touch-icon" sizes="180x180" />
-    <link href="assets/icon/icon120x120.png" rel="apple-touch-icon" sizes="120x120" />
-    <link href="assets/icon/icon167x167.png" rel="apple-touch-icon" sizes="167x167" />
-    <link href="assets/icon/icon152x152.png" rel="apple-touch-icon" sizes="152x152" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Smart ID" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <!-- cordova.js required for cordova apps (remove if not needed) -->
-    <!-- <script src="cordova.js"></script> -->
+        <meta http-equiv="x-ua-compatible" content="IE=Edge" />
 
-    <!-- un-comment this code to enable service worker
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
-        .catch(err => console.error('Error', err));
-    }
-  </script>-->
+        <meta name="google" content="notranslate">
 
-    <link href="build/main.css" rel="stylesheet">
+        <link href="/build/app.css" rel="stylesheet" id="app_style" />
+        <script src="/build/app.js" id="app_script"></script>
 
-</head>
+        <link href="assets/icon/icon180x180.png" rel="apple-touch-icon" sizes="180x180" />
+        <link href="assets/icon/icon120x120.png" rel="apple-touch-icon" sizes="120x120" />
+        <link href="assets/icon/icon167x167.png" rel="apple-touch-icon" sizes="167x167" />
+        <link href="assets/icon/icon152x152.png" rel="apple-touch-icon" sizes="152x152" />
 
-<body>
+        <link rel="icon" type="image/x-icon" href="/assets/icon/icon64x64.ico" />
+        <link rel="manifest" href="/manifest.json" />
+    </head>
 
-    <!-- Ionic's root component and where the app will load -->
-    <ion-app></ion-app>
-
-    <!-- The polyfills js is generated during the build process -->
-    <script src="build/polyfills.js"></script>
-
-    <!-- The vendor js is generated during the build process
-       It contains all of the dependencies in node_modules -->
-    <script src="build/vendor.js"></script>
-
-    <!-- The main bundle js is generated during the build process -->
-    <script src="build/main.js"></script>
-
-</body>
+    <body>
+        <app-root></app-root>
+    </body>
 
 </html>

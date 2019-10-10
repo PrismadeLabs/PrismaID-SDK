@@ -1,13 +1,18 @@
 {
-  "name": "PrismaSDK Demo",
-  "short_name": "PrismaSDK",
-  "start_url": "index.html",
+  "name": "Prisma ID",
+  "short_name": "Prisma ID",
+  "start_url": "/",
   "display": "standalone",
   "icons": [{
-    "src": "assets/icon/icon512x512.png",
+    "src": "assets/icon/icon192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },{
+    "src": "assets/icon/icon512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#4e8ef7",
-  "theme_color": "#4e8ef7"
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait"
 }

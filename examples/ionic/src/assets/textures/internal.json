@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "assets/textures/internal-0.png"
+],
+
+"framerate": 20,
+"frames": [
+    [1, 1, 693, 1102, 0, 0, 0],
+    [696, 1, 1087, 762, 0, 0, 0],
+    [696, 765, 590, 659, 0, 0, 0],
+    [1, 1426, 14, 14, 0, 0, 0],
+    [1, 1105, 423, 268, 0, -2, -2],
+    [1, 1375, 64, 49, 0, 0, 0],
+    [1288, 765, 423, 268, 0, -2, -2],
+    [1288, 1035, 422, 208, 0, 0, 0],
+    [1288, 1245, 422, 208, 0, 0, 0],
+    [426, 1105, 128, 128, 0, 0, 0]
+],
+
+"animations": {
+    "detec-card": { "frames": [0] },
+    "detec_hand-02": { "frames": [1] },
+    "detec_thumb": { "frames": [2] },
+    "bullet": { "frames": [3] },
+    "homescreen_android": { "frames": [4] },
+    "wifi": { "frames": [5] },
+    "homescreen_android_de": { "frames": [6] },
+    "homescreen_ios": { "frames": [7] },
+    "homescreen_ios_de": { "frames": [8] },
+    "placeholder": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:76facc8d909c709cdcac3dc9696d5ad5:666404207f41b5b66e17bc3a7e4faee7:6b448c895acfae9856a4e9823c087d3f$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

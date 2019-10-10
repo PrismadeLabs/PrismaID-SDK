@@ -36,19 +36,19 @@ sdk.getInteractionSubject().subscribe((response) => {
 })
 
 sdk.getInitialisationSubject().subscribe((response) => {
-    console.log("*) config data:", response.codeSetTypes, response.dpi, response.devicePixelRatio)
+    console.log("*) config data:", response.codeSetTypes, response.ppi, response.devicePixelRatio)
 })
 
 sdk.getProgressSubject().subscribe((response) => {
     console.log("*) progress:", response.progress)
 })
 
-sdk.getHintSubject().subscribe((response) => {
-    console.log("*) hint:", response.code, response.message, response.type)
-})
-
 sdk.getConnectivitySubject().subscribe((response) => {
     console.log("*) connectivity:", response.status)
+})
+
+sdk.getUsabilitySubject().subscribe((response) => {
+    console.log("*) usability:", response.event, response.payload, response.localizedMessage())
 })
 
 sdk.attachToElement(canvas)
