@@ -4,7 +4,7 @@ const canvas = document.getElementById("prismasdk")
 canvas.width = window.innerWidth - 20
 canvas.height = window.innerHeight - 20
 
-const sdk = new pl.PrismaSDK("Mwtx2fLCIZ3BXYoAXVUbl8KM1GKQGhE3oCJyssW9")  
+const sdk = new pl.PrismaSDK("disEHl8qrI7NBRFs8oGyb6PFcEfLicjuF1jHDCtc")  
 const version = "Prisma SDK version " + pl.PrismaSDK.version()
 
 const ctx = canvas.getContext("2d")
