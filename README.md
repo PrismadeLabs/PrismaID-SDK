@@ -18,15 +18,17 @@ npm install @prismadelabs/prismaid
 
 ## Usage
 
-At the moment we provided two minimalistic samples how to use the Web SDK in
+At the moment we provided three minimalistic samples how to use the Web SDK in
 
 -   Javascript application
 -   Ionic application
+-   React application
 
 ## Table of Contents
 
 -   [Use SDK in Javascript application](#Use-SDK-in-Javascript-application)
 -   [Use SDK in Ionic application](#Use-SDK-in-Ionic-application)
+-   [Use SDK in React application](#Use-SDK-in-React-application)
 -   [API reference](#API-reference)
 -   [Subscriptions](#Subscriptions)
 
@@ -205,6 +207,100 @@ export class HomePage {
     ....
 ```
 
+## Use SDK in React application
+
+It is assumed that one is experienced with React applications, so we will not go into detail here. [Learn more](https://reactjs.org/tutorial/tutorial.html)
+
+```typescript SDK.tsx
+import { PrismaSDK } from "@prismadelabs/prismaid";
+
+class SDKSingleton {
+  private static instance: SDKSingleton;
+  sdk: PrismaSDK;
+
+  constructor() {
+    if (SDKSingleton.instance) {
+      throw new Error("Error - use SDKSingleton.getInstance()");
+    }
+    this.sdk = new PrismaSDK(YOUR_API_KEY);
+  }
+
+  static getInstance(): SDKSingleton {
+    SDKSingleton.instance = SDKSingleton.instance || new SDKSingleton();
+    return SDKSingleton.instance;
+  }
+}
+
+export default SDKSingleton;
+```
+
+```typescript index.tsx
+import { ConnectivityResponse, UsabilityResponse } from "@prismadelabs/prismaid";
+import { useEffect, useRef, useState } from "react";
+import SDKSingleton from "SDK";
+
+interface Props {}
+
+// component
+const SwipeField = (props: Props) => {
+  const [sdk] = useState(SDKSingleton.getInstance().sdk);
+
+  // configure sdk
+  useEffect(() => {
+    sdk.resume();
+    let initialisationSubject = sdk.getInitialisationSubject().subscribe((response) => {
+      console.log("*) initialisationResponse", response);
+    });
+
+    const usabilitySubject = sdk.getUsabilitySubject().subscribe((response: UsabilityResponse) => {
+      console.log("*) usabilityResponse", response);
+    });
+
+    const detectionSuccessSubject = sdk.getDetectionSuccessSubject().subscribe((response) => {
+      console.log("*) detection success:", response.description());
+    });
+
+    const detectionErrorSubject = sdk.getDetectionErrorSubject().subscribe((response) => {
+      console.log("*) detection error:", response.description());
+    });
+
+    const interactionSubject = sdk.getInteractionSubject().subscribe((response) => {
+      console.log("*) interaction response:", response);
+    });
+
+    const progressSubject = sdk.getProgressSubject().subscribe((response) => {
+      console.log("*) progress:", response.progress);
+    });
+
+    const connectivitySubject = sdk.getConnectivitySubject().subscribe((response: ConnectivityResponse) => {
+      console.log("*) connectivity response:", response.status);
+    });
+
+    const screen = document.querySelector("#swipeScreen");
+    if (screen) {
+      sdk.attachToElement(screen);
+    }
+
+    return () => {
+      initialisationSubject.unsubscribe();
+      usabilitySubject.unsubscribe();
+      progressSubject.unsubscribe();
+      connectivitySubject.unsubscribe();
+      detectionSuccessSubject.unsubscribe();
+      detectionErrorSubject.unsubscribe();
+      interactionSubject.unsubscribe();
+    };
+  }, []);
+  return (
+      <div id="swipeScreen" className="absolute top-0 left-0 w-screen h-full overflow-hidden">
+            
+      </div>
+  );
+};
+export default SwipeField;
+
+```
+
 ## API reference
 
 ### `class PrismaSDK`
@@ -214,6 +310,12 @@ public expectedCodeType?: CodeType
 ```
 
 Set this property if your application supports detection of multiple `CodeType`s, but you at this point in time you expect only a specific one.
+
+```typescript
+public expectedCodeHeight?: number
+```
+
+Set this property if your application requires the user to swipe a specific height on the card, but at this point in time you don't need to set it.
 
 ```typescript
 public expectedSwipingGesture?: SwipingGesture
@@ -246,6 +348,12 @@ function resume()
 Call this to resume normal operation of the SDK.
 
 ```typescript
+function resetManual()
+```
+
+Call this to manually reset the operations of the SDK.
+
+```typescript
 function isRunningStandalone(): boolean
 ```
 
@@ -267,10 +375,16 @@ This method will force the SDK to return localized event in a specific language.
 
 ```typescript
 {
+    Axel = "Axel",
+    AxelZip = "AxelZip",
+    AxelZipShort = "AxelZipShort",
     Displacement = "Displacement",
+    DisplacementKey = "DisplacementKey",
     Tick = "Tick",
     Pack = "Pack",
     Tornado = "Tornado",
+    DisplacementZip = "DisplacementZip",
+    DisplacementZipShort = "DisplacementZipShort",
 }
 ```
 
@@ -311,6 +425,10 @@ public clientConfig: ClientConfig
 ```typescript
 public deviceSupport: DeviceSupport
 ```
+```typescript
+public isDisplayZoomEnabled: boolean
+```
+The sdk sets this to true if it detects a display zoom setting enabled on the smartphone.
 
 ### TutorialResponse
 
