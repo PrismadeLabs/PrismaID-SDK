@@ -32,7 +32,7 @@ import { TutorialContainer } from "../../Classes/TutorialContainer"
     styleUrl: "app-home.css",
 })
 export class AppHome {
-    private static apiKey = "disEHl8qrI7NBRFs8oGyb6PFcEfLicjuF1jHDCtc"
+    private static apiKey = "SCvL5XDWme6pOy0Cbi6UN4WBGJSkEboM9y0fXo7T"
 
     @Prop() private sdkUI: PrismaUISDK
 
