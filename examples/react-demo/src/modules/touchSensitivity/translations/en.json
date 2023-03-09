@@ -1,0 +1,6 @@
+{
+  "title": "Touch Sensitivity",
+  "body": "Your touch screen might need calibration. Please check in Settings -> Display, whether \"Touch Sensitivity\" is active.",
+  "label": "Touch Sensitivity is active",
+  "button": "Resume"
+}

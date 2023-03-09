@@ -1,0 +1,164 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  div {
+    /* @apply border border-red-500; */
+  }
+
+  body,
+  html,
+  #test,
+  #root {
+    @apply h-full overflow-hidden;
+  }
+
+  body {
+    @apply fixed;
+    @apply pb-safe-bottom;
+  }
+
+  #root {
+    @apply relative;
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 100;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-UltraLight.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 200;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-Thin.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-Light.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-Regular.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-Medium.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 600;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-SemiBold.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-Bold.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 800;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-ExtraBold.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: 900;
+    font-style: normal;
+    src: url(./assets/fonts/Gilroy/Radomir-Tinkov-Gilroy-Black.otf) format("truetype");
+  }
+}
+
+.no-touch {
+  touch-action: none;
+  pointer-events: none;
+}
+
+/* fade in*/
+/* exit */
+.fadeIn-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s ease opacity;
+}
+.fadeIn-exit-active {
+  opacity: 0;
+}
+/* enter */
+.fadeIn-enter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s ease opacity;
+}
+.fadeIn-enter {
+  opacity: 0;
+}
+.fadeIn-enter-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* slide from right*/
+/* enter */
+.slideFromRight-enter {
+  transform: translateX(100vw);
+  opacity: 0;
+  position: absolute;
+}
+.slideFromRight-enter.slideFromRight-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms linear 300ms;
+}
+.slideFromRight-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s ease opacity;
+}
+.slideFromRight-exit-active {
+  opacity: 0;
+}
+
+/* slide from bottom*/
+/* enter */
+.slideFromBottom-enter {
+  transform: translateY(100vh);
+  opacity: 0;
+  position: absolute;
+}
+.slideFromBottom-enter.slideFromBottom-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 300ms linear 300ms;
+}
+.slideFromBottom-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s ease opacity;
+}
+.slideFromBottom-exit-active {
+  opacity: 0;
+}

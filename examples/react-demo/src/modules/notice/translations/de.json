@@ -1,0 +1,22 @@
+{
+  "faq": "Lösungsvorschläge",
+
+  "error.title": "Fehler",
+  "error.body": "Es ist ein Fehler aufgetreten.",
+
+  "invalidDevice.title": "Inkompatibles Gerät",
+  "invalidDevice.body": "Leider wird ihr Gerät nicht unterstützt. Bitte öffnen Sie den Link auf einem anderen Gerät.",
+
+  "invalidBrowser.title": "Inkompatibler Browser",
+  "invalidBrowser.body": "Leider wird ihr Browser nicht unterstützt. Bitte öffnen Sie den Link in einem anderen Browser oder auf einem anderen Gerät.",
+
+  "screenTooSmall.title": "",
+  "screenTooSmall.body": "Dieses Smartphone ist sehr klein.\nEinige Hinweise können möglicherweise nicht sichtbar sein.\n\nWir empfehlen die Anwendung auf einem größerem Gerät zu nutzen.",
+  "proceedAnyway": "Trotzdem fortfahren",
+
+  "invalidLink.title": "Ungültiger Link",
+  "invalidLink.body": "Der Link, den Sie aufgerufen haben, ist nicht gültig.",
+
+  "zoomedDisplay.title": "",
+  "zoomedDisplay.body": "Bei ihrem Gerät ist eine Bildschirm-Zoom-Einstellung aktiviert. Bitte wechseln Sie zur Standardeinstellung und gehen Sie zu Einstellungen -> Bedienungshilfen -> Zoom."
+}

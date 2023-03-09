@@ -1,0 +1,23 @@
+{
+  "faq": "Suggested solutions",
+
+  "error.title": "Error",
+  "error.body": "An error has occured.",
+
+  "invalidDevice.title": "Incompatible device",
+  "invalidDevice.body": "Unfortunately, your device is not supported. Please open the app on another device.",
+
+  "invalidBrowser.title": "Incompatible browser",
+  "invalidBrowser.body": "Unfortunately, your browser is not supported. Please open the app in another browser or on another device.",
+
+  "screenTooSmall.title": "",
+  "screenTooSmall.body": "This device is very small.\nSome messages might not be visible.\n\nWe recommend to use the app on a taller device.",
+  "proceedAnyway": "Resume anyway",
+
+  "invalidLink.title": "Invalid Link",
+  "invalidLink.body": "The link is invalid",
+
+  
+  "zoomedDisplay.title": "",
+  "zoomedDisplay.body": "Your device has a display-zoom setting enabled. Please change to the standard setting and go to Settings -> Accessibility -> Zoom."
+}

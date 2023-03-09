@@ -1,0 +1,31 @@
+{
+  "browser_not_supported": "This browser is not supported!",
+  "browser_support_unknown": "This browser might not be supported!",
+  "device_not_supported": "Unfortunately, this device is not supported!",
+  "display_small_should_add_to_home": "Small display, please add app to homescreen!",
+  "display_too_small_displacement": "Display too small!",
+  "display_too_small_pack": "Display too small!",
+  "display_too_small_tick": "Display too small!",
+  "display_too_small_tornado": "Display too small!",
+  "finger_too_thick": "Please use pointing finger to swipe over the card!",
+  "hold_card_below_swipe": "Please hold card in lower corner!",
+  "hold_with_one_finger_only": "Please hold card with one finger only!",
+  "pick_up_code_from_display_and_retry": "Please place card again!",
+  "swipe_faster": "Please swipe over the card at a higher speed!",
+  "swipe_incomplete": "Please swipe over the whole card!",
+  "swipe_slower": "Please swipe over the card at a slower speed!",
+  "swipe_without_card": "Please swipe over the card!",
+  "take_device_in_hand": "Please hold the device with your hand!",
+  "invalid_signal": "Signal invalid!",
+
+  "invalid_card": "Please swipe again.",
+
+  "place.title": "Place card",
+  "place.body": "Place card and hold with your left thumb.",
+
+  "swipe.title": "Swipe",
+  "swipe.body": "Swipe slowly with your index finger from bottom upwards to the blue dot.",
+
+  "retry.title": "Try again",
+  "retry.body": "Please swipe again."
+}
