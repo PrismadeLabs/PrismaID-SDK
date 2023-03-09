@@ -1,0 +1,26 @@
+{
+  "title": "Lösungsvorschläge",
+
+  "intro": "Sie halten eine Innovation aus umweltfreundlicher, gedruckter Elektronik in der Hand. Wie bei jeder neuen Technologie ist manchmal etwas Übung nötig. Falls etwas nicht wie erwartet funktioniert, geben wir hier einige zusätzliche Hinweise. Vielen Dank für Ihre Aufmerksamkeit!",
+
+  "1q": "Allgemeine Hinweise",
+  "1a_1": "Die Anwendung funktioniert am Besten, wenn Sie folgende Hinweise beachten:",
+  "1a_2": "Telefon in der Hand halten, nicht auf den Tisch legen.",
+  "1a_3": "Auf der Karte befindet sich ein aufgedruckter Pfeil, dieser markiert gemeinsam mit dem Zielpunkt auf dem Display, die Linie auf der Sie entlang streichen.",
+  "1a_4": "Streichen Sie mit der Spitze des Zeigefingers in einer geraden Linie, nicht mit dem Daumen. Vermeiden Sie eine zu große Auflagefläche ihres Fingers.",
+  "1a_5": "Die Karte während des Darüberstreichens möglichst nicht verschieben.",
+  "1a_6": "Halten Sie dazu die Karte mit dem Daumen fest. Legen Sie den Daumen auf den linken Rand der Karte, nicht auf die Mitte.",
+  "1a_7": "Eventuell aktivierte Eingabehilfen o. Ä. in den Anzeigeeinstellungen Ihres Smartphones temporär deaktivieren. Ihre Anzeige funktioniert korrekt, wenn die auf dem Bildschirm dargestellte Karte 1 : 1 in Originalgröße abgebildet wird.",
+
+  "2q": "Auf anderem Smartphone verifizieren",
+  "2a": "Sollte keine der hier obigen Punkte hilfreich sein, ist Ihr Telefon möglicherweise nicht kompatibel. In diesem Fall empfehlen wir die Anwendung auf einem anderen Smartphone zu nutzen.",
+
+  "3q": "Displayschutzfolien und Panzerglas",
+  "3a": "In manchen Fällen kann eine besonders dicke Displayschutzfolie die Erkennung der Karte erschweren. Mehrere Versuche können hier nötig sein. In diesem Fall streichen Sie bitte mit flachem Finger und etwas mehr Druck.",
+
+  "4q": "Hinweis für Samsung Smartphones",
+  "4a": "Sollten Sie Nutzer eines Samsung-Smartphones sein, so empfehlen wir die Funktion Berührungsempfindlichkeit zu aktivieren. Zu finden ist Sie unter \"Einstellungen\" -> \"Anzeige\" ->\"Berührungsempfindlichkeit\".",
+
+  "5q": "Das funktioniert immer noch nicht",
+  "5a": "Das tut uns sehr Leid. Wir werden dem Problem auf den Grund gehen, um den Vorgang kontinuierlich zu verbessern. Bitte setzen Sie sich mit Ihrem Prismade Kontakt in Verbindung."
+}

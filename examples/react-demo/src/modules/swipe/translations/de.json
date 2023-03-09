@@ -1,0 +1,31 @@
+{
+  "browser_not_supported": "Dieser Browser wird nicht unterstützt!",
+  "browser_support_unknown": "Dieser Browser wird möglicherweise nicht unterstützt!",
+  "device_not_supported": "Dieses Gerät wird leider nicht untersützt!",
+  "display_small_should_add_to_home": "Display sehr klein, bitte die App zum Homescreen hinzufügen!",
+  "display_too_small_displacement": "Das Display dieses Gerätes ist zu klein!",
+  "display_too_small_pack": "Das Display dieses Gerätes ist zu klein!",
+  "display_too_small_tick": "Das Display dieses Gerätes ist zu klein!",
+  "display_too_small_tornado": "Das Display dieses Gerätes ist zu klein!",
+  "finger_too_thick": "Bitte über die Karte mit dem Zeigefinger streichen!",
+  "hold_card_below_swipe": "Bitte Karte in der unteren Ecke festhalten!",
+  "hold_with_one_finger_only": "Bitte die Karte nur mit einem Finger halten!",
+  "pick_up_code_from_display_and_retry": "Bitte Karte neu auflegen!",
+  "swipe_faster": "Bitte schneller über die Karte streichen!",
+  "swipe_incomplete": "Bitte über die gesamte Kartenhöhe streichen!",
+  "swipe_slower": "Bitte langsamer über die Karte streichen!",
+  "swipe_without_card": "Bitte über die Karte streichen!",
+  "take_device_in_hand": "Bitte Gerät in die Hand nehmen!",
+  "invalid_signal": "Signal ungültig!",
+
+  "invalid_card": "Bitte streichen Sie erneut.",
+
+  "place.title": "Auflegen",
+  "place.body": "Führerschein auflegen und mit dem linken Daumen halten.",
+
+  "swipe.title": "Streichen",
+  "swipe.body": "Mit dem Zeigefinger langsam von unten nach oben zum blauen Punkt streichen.",
+
+  "retry.title": "Noch einmal",
+  "retry.body": "Bitte streichen Sie erneut."
+}

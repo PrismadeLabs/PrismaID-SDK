@@ -1,0 +1,26 @@
+{
+  "title": "Instructions",
+
+  "intro": "You are holding an innovation made of environmentally friendly, interactive, printed electronics in your hand. As with any new technology, it might need a bit of training to get it right. If something does not work as expected, below we provide more background information and guidance. Thank you for your attention!",
+
+  "1q": "General information",
+  "1a_1": "The application works best, if you observe the following:",
+  "1a_2": "Hold the phone in your hand, do not put it on the table.",
+  "1a_3": "The printed arrow on the card, together with the target point on the display, marks the line on which you should be swiping.",
+  "1a_4": "Swipe in a straight line with the tip of your index finger, not your thumb. Avoid covering a too large surface area with your finger tip.",
+  "1a_5": "If possible, do not move the card while swiping over it.",
+  "1a_6": "Hold the card with your thumb. Place your thumb on the left border of the card, not on center.",
+  "1a_7": "If your phone has accessibility features activated (e.g. display zoom, touch assistance), please temporarily deactivate them. Your display works correctly if the card is shown on the screen 1 : 1 in its original size.",
+
+  "2q": "Verify on another smartphone",
+  "2a": "If none of the points shown here are helpful, your phone may not be compatible. In this case you can use the application on another smartphone.",
+
+  "3q": "Screen protector foils and glass protectors",
+  "3a": "In rare cases, a particularly thick screen protector can make verification more difficult. Several attempts may be necessary here. In this case, please swipe with your flat finger and a bit more pressure.",
+
+  "4q": "Note for Samsung smartphones",
+  "4a": "If you are a user of a Samsung smartphone, we advise activating the touch sensitivity. You can find it under “Settings” -> “Display” -> “Touch sensitivity”.",
+
+  "5q": "That still doesn't work",
+  "5a": "We are very sorry. We will find the source of the problem in order to continuously improve the detection. Please get in contact with your prismade contact."
+}
